@@ -1,5 +1,8 @@
 syntax = "proto2";
-package douyin.core;
+
+option go_package = "github.com/CSU-Apple-Lab/tinyTikTok/internal/pkg"; 
+
+package user;
 
 message douyin_user_login_request {
   required string username = 1; // 登录用户名
