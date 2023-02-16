@@ -1,10 +1,9 @@
 package test
 
 import (
+	"github.com/stretchr/testify/assert"
 	"net/http"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestRelation(t *testing.T) {
@@ -65,10 +64,8 @@ func TestChat(t *testing.T) {
 	userIdB, tokenB := getTestUserToken(testUserB, e)
 
 	messageResp := e.POST("/douyin/message/action/").
-		WithQuery("token", tokenA).
-		WithQuery("to_user_id", userIdB).WithQuery("action_type", 1).WithQuery("content", "Send to UserB").
-		WithFormField("token", tokenA).
-		WithFormField("to_user_id", userIdB).WithFormField("action_type", 1).WithQuery("content", "Send to UserB").
+		WithQuery("token", tokenA).WithQuery("to_user_id", userIdB).WithQuery("action_type", 1).WithQuery("content", "Send to UserB").
+		WithFormField("token", tokenA).WithFormField("to_user_id", userIdB).WithFormField("action_type", 1).WithQuery("content", "Send to UserB").
 		Expect().
 		Status(http.StatusOK).
 		JSON().Object()
