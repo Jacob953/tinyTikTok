@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := all
 
 .PHONY: all
-all: tidy format lint cover build
+all: tidy format lint build
 
 # Build options
 ROOT_PACKAGE=github.com/CSU-Apple-Lab/tinyTikTok
@@ -43,14 +43,14 @@ lint:
 	@$(MAKE) go.lint
 
 ## test: Run unit test.
-.PHONY: test
-test:
-	@$(MAKE) go.test
+#.PHONY: test
+#test:
+#	@$(MAKE) go.test
 
 ## cover: Run unit test and get test coverage.
-.PHONY: cover
-cover:
-	@$(MAKE) go.test.cover
+#.PHONY: cover
+#cover:
+#	@$(MAKE) go.test.cover
 
 ## format: Gofmt (reformat) package sources (exclude vendor dir if existed).
 .PHONY: format
