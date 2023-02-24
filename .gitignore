@@ -64,7 +64,7 @@ flycheck_*.el
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
+# $ git configs --global mergetool.keepBackup false
 
 # Created by git when using merge tools for conflicts
 *.BACKUP.*
