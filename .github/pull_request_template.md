@@ -1,7 +1,7 @@
 Fixes #ISSUSE_ID.
 
 Changes proposed in this pull request:
-  -
+-
 
 ---
 
