@@ -1,0 +1,33 @@
+# RESTful config
+server:
+  mode: debug # server mode: release, debug, test，默认 release
+  id: 10
+
+# GRPC config
+grpc:
+  bind-address: 0.0.0.0
+  bind-port: 8081
+
+# HTTPS config
+secure:
+  bind-address: 0.0.0.0
+  bind-port: 8443
+
+
+# MySQL config
+mysql:
+  host: 127.0.0.1:3306
+  username: root # MySQL 用户名
+  password: root # MySQL 用户密码
+  database: tiny_tiktok_db
+  max-idle-connections: 100
+  max-open-connections: 100
+  max-connection-life-time: 10s
+  log-level: 4 # GORM log level, 1: silent, 2:error, 3:warn, 4:info
+
+# JWT 配置
+jwt:
+  realm: JWT # jwt 标识
+  key: dfVpOK8LZeJLZHYmHdb1VdyRrACKpqoo # 服务端密钥
+  timeout: 24h # token 过期时间(小时)
+  max-refresh: 24h # token 更新时间(小时)
